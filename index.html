@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>AIR STRIDE 2 | CodingWithWajahat</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.3.0/model-viewer.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+
+<body data-page="home">
+  <div class="bg-circle"></div>
+  <div class="bg-blur"></div>
+
+  <nav>
+    <a class="logo" href="index.html">NIKE<span class="dot">.</span></a>
+
+    <ul class="nav-links" id="navLinks">
+      <i class="ri-close-line close-btn" id="closeBtn"></i>
+      <li><a id="nav-home" href="index.html">Home</a></li>
+      <li><a id="nav-products" href="catalog.html">Products</a></li>
+      <li><a id="nav-about" href="about.html">About</a></li>
+      <li><a id="nav-contact" href="contact.html">Contact</a></li>
+    </ul>
+
+    <div class="nav-icons">
+      <i class="ri-shopping-bag-3-line"></i>
+      <i class="ri-menu-4-line mobile-toggle" id="menuToggle"></i>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="home">
+    <h1 class="big-title">Stride with<br>Style.</h1>
+
+    <div class="model-wrapper">
+      <model-viewer
+        id="main-shoe"
+        src="https://cdn.jsdelivr.net/gh/KhronosGroup/glTF-Sample-Models@master/2.0/MaterialsVariantsShoe/glTF-Binary/MaterialsVariantsShoe.glb"
+        ar shadow-intensity="1" camera-controls touch-action="pan-y" auto-rotate loading="eager">
+      </model-viewer>
+    </div>
+
+    <div class="controls-wrapper">
+      <div class="color-selector" id="homeColorSelector">
+        <div class="color-dot black" data-color="black"></div>
+        <div class="color-dot white active" data-color="white"></div>
+        <div class="color-dot blue" data-color="blue"></div>
+      </div>
+    </div>
+
+    <div class="size-picker" data-size-picker>
+      <div class="size-opt">7</div>
+      <div class="size-opt">8</div>
+      <div class="size-opt active">9</div>
+      <div class="size-opt">10</div>
+    </div>
+
+    <div class="product-info">
+      <div class="shoe-name" id="shoe-name">Air Pure White</div>
+      <div class="price-tag">
+        <span id="shoe-price">$159.00</span>
+        <span class="old-price">$200.00</span>
+      </div>
+      <p class="product-desc">Engineered for comfort. Designed for speed. The future is on your feet.</p>
+    </div>
+
+    <div class="cta-group">
+      <button class="btn-main" onclick="alert('Added to Cart!')">Add to Cart</button>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section id="features">
+    <div class="container">
+      <div class="features-grid">
+        <div class="feature-item">
+          <i class="ri-flashlight-fill"></i>
+          <h3>Ultra Lightweight</h3>
+          <p>Aerospace-grade materials for zero gravity feel.</p>
+        </div>
+        <div class="feature-item">
+          <i class="ri-drop-fill"></i>
+          <h3>Water Proof</h3>
+          <p>Nano-coating technology keeps you dry anywhere.</p>
+        </div>
+        <div class="feature-item">
+          <i class="ri-earth-fill"></i>
+          <h3>Sustainable</h3>
+          <p>Crafted from 100% recycled ocean plastics.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUCTS PREVIEW -->
+  <section id="products">
+    <div class="container">
+      <h2 class="section-title">New Arrivals</h2>
+      <span class="section-subtitle">Exclusive drops for the season.</span>
+
+      <div class="grid-container">
+        <a class="card" href="product.html?sku=phantom-black">
+          <div class="card-model">
+            <model-viewer
+              src="https://cdn.jsdelivr.net/gh/KhronosGroup/glTF-Sample-Models@master/2.0/MaterialsVariantsShoe/glTF-Binary/MaterialsVariantsShoe.glb"
+              shadow-intensity="1" auto-rotate
+              style="filter: grayscale(100%) brightness(0.7); width:100%; height:100%;"
+              interaction-prompt="none"></model-viewer>
+          </div>
+          <div class="card-info">
+            <h4>Air Phantom Black</h4>
+            <span>$189.00</span>
+          </div>
+        </a>
+
+        <a class="card" href="product.html?sku=pure-white">
+          <div class="card-model">
+            <model-viewer
+              src="https://cdn.jsdelivr.net/gh/KhronosGroup/glTF-Sample-Models@master/2.0/MaterialsVariantsShoe/glTF-Binary/MaterialsVariantsShoe.glb"
+              variant-name="beach"
+              shadow-intensity="1" auto-rotate
+              style="filter: grayscale(100%) brightness(1.2); width:100%; height:100%;"
+              interaction-prompt="none"></model-viewer>
+          </div>
+          <div class="card-info">
+            <h4>Air Pure White</h4>
+            <span>$159.00</span>
+          </div>
+        </a>
+
+        <a class="card" href="product.html?sku=blaze-orange">
+          <div class="card-model">
+            <model-viewer
+              src="https://cdn.jsdelivr.net/gh/KhronosGroup/glTF-Sample-Models@master/2.0/MaterialsVariantsShoe/glTF-Binary/MaterialsVariantsShoe.glb"
+              shadow-intensity="1" auto-rotate
+              style="filter: hue-rotate(20deg) saturate(3) brightness(1.1); width:100%; height:100%;"
+              interaction-prompt="none"></model-viewer>
+          </div>
+          <div class="card-info">
+            <h4>Air Blaze Orange</h4>
+            <span>$210.00</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="view-all-container">
+        <a class="btn-outline" href="catalog.html">View All Products</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT PREVIEW -->
+  <section id="about-preview">
+    <div class="container">
+      <div class="about-wrapper">
+        <div class="about-content">
+          <h2 class="section-title" style="text-align:left;">Innovating the<br>Future.</h2>
+          <p>
+            Air Stride isn't just a shoe store; it's a technological leap forward. We combine WebGL 3D rendering
+            with high-fashion footwear design to give you an immersive shopping experience.
+          </p>
+          <a class="btn-outline" style="color:white; border-color:white;" href="about.html">Read Our Story</a>
+        </div>
+
+        <div class="about-visual">
+          <model-viewer
+            src="https://cdn.jsdelivr.net/gh/KhronosGroup/glTF-Sample-Models@master/2.0/MaterialsVariantsShoe/glTF-Binary/MaterialsVariantsShoe.glb"
+            camera-orbit="-45deg 75deg 2.5m"
+            disable-zoom auto-rotate rotation-per-second="5deg"
+            style="width:100%; height:100%; filter: grayscale(100%);"></model-viewer>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMMUNITY (UPDATED: marquee slider) -->
+  <section id="contact-preview">
+    <div class="container">
+      <h2 class="section-title">Join the Community</h2>
+      <span class="section-subtitle">Connect with CodingWithWajahat on all platforms.</span>
+
+      <div class="community-marquee" aria-label="Community links marquee">
+        <div class="community-track">
+          <!-- Set 1 -->
+          <div class="community-group">
+            <a href="https://github.com/Codingwithwajahat" target="_blank" class="social-card social-card--mini">
+              <i class="ri-github-fill"></i>
+              <h3>GitHub</h3>
+              <span>Explore Repositories</span>
+            </a>
+
+            <a href="https://www.facebook.com/profile.php?id=61579834634804" target="_blank" class="social-card social-card--mini">
+              <i class="ri-facebook-circle-fill"></i>
+              <h3>Facebook</h3>
+              <span>Follow Page</span>
+            </a>
+
+            <a href="https://www.instagram.com/codingwithwajahat/" target="_blank" class="social-card social-card--mini">
+              <i class="ri-instagram-fill"></i>
+              <h3>Instagram</h3>
+              <span>Behind Scenes</span>
+            </a>
+
+            <a href="https://www.linkedin.com/in/codingwithwajahat/" target="_blank" class="social-card social-card--mini">
+              <i class="ri-linkedin-fill"></i>
+              <h3>LinkedIn</h3>
+              <span>Professional Network</span>
+            </a>
+          </div>
+
+          <!-- Set 2 (duplicate for seamless infinite loop) -->
+          <div class="community-group" aria-hidden="true">
+            <a href="https://github.com/Codingwithwajahat" target="_blank" class="social-card social-card--mini">
+              <i class="ri-github-fill"></i>
+              <h3>GitHub</h3>
+              <span>Explore Repositories</span>
+            </a>
+
+            <a href="https://www.facebook.com/profile.php?id=61579834634804" target="_blank" class="social-card social-card--mini">
+              <i class="ri-facebook-circle-fill"></i>
+              <h3>Facebook</h3>
+              <span>Follow Page</span>
+            </a>
+
+            <a href="https://www.instagram.com/codingwithwajahat/" target="_blank" class="social-card social-card--mini">
+              <i class="ri-instagram-fill"></i>
+              <h3>Instagram</h3>
+              <span>Behind Scenes</span>
+            </a>
+
+            <a href="https://www.linkedin.com/in/codingwithwajahat/" target="_blank" class="social-card social-card--mini">
+              <i class="ri-linkedin-fill"></i>
+              <h3>LinkedIn</h3>
+              <span>Professional Network</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-col footer-brand">
+        <h3>CodingWithWajahat<span class="dot">.</span></h3>
+        <p>Bringing immersive 3D web experiences to life. Premium footwear deserves a premium digital showcase.</p>
+        <div class="social-links-footer">
+          <a href="https://github.com/Codingwithwajahat" target="_blank" class="social-btn"><i class="ri-github-fill"></i></a>
+          <a href="https://www.facebook.com/profile.php?id=61579834634804" target="_blank" class="social-btn"><i class="ri-facebook-fill"></i></a>
+          <a href="https://www.instagram.com/codingwithwajahat/" target="_blank" class="social-btn"><i class="ri-instagram-fill"></i></a>
+          <a href="https://www.linkedin.com/in/codingwithwajahat/" target="_blank" class="social-btn"><i class="ri-linkedin-fill"></i></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="catalog.html">New Arrivals</a></li>
+          <li><a href="catalog.html">Best Sellers</a></li>
+          <li><a href="catalog.html">Men's Shoes</a></li>
+          <li><a href="catalog.html">Women's Shoes</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">Our Story</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Newsletter</h4>
+        <p style="color:#888; font-size:0.9rem; margin-bottom:15px;">Subscribe for latest drops.</p>
+        <div class="newsletter-wrapper">
+          <input type="email" placeholder="Email" class="newsletter-input">
+          <button class="newsletter-btn" type="button"><i class="ri-arrow-right-line"></i></button>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2024 Air Stride. Designed & Developed by CodingWithWajahat.</p>
+    </div>
+  </footer>
+</body>
+</html>

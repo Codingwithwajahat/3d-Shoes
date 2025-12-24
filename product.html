@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Product | Air Stride</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.3.0/model-viewer.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
+</head>
+
+<body data-page="products">
+  <div class="bg-circle"></div>
+  <div class="bg-blur"></div>
+
+  <nav>
+    <a class="logo" href="index.html">NIKE<span class="dot">.</span></a>
+
+    <ul class="nav-links" id="navLinks">
+      <i class="ri-close-line close-btn" id="closeBtn"></i>
+      <li><a id="nav-home" href="index.html">Home</a></li>
+      <li><a id="nav-products" href="catalog.html">Products</a></li>
+      <li><a id="nav-about" href="about.html">About</a></li>
+      <li><a id="nav-contact" href="contact.html">Contact</a></li>
+    </ul>
+
+    <div class="nav-icons">
+      <i class="ri-shopping-bag-3-line"></i>
+      <i class="ri-menu-4-line mobile-toggle" id="menuToggle"></i>
+    </div>
+  </nav>
+
+  <section class="page-top">
+    <div class="pd-container">
+      <div class="pd-visual">
+        <model-viewer
+          id="pd-model"
+          src="https://cdn.jsdelivr.net/gh/KhronosGroup/glTF-Sample-Models@master/2.0/MaterialsVariantsShoe/glTF-Binary/MaterialsVariantsShoe.glb"
+          camera-controls auto-rotate shadow-intensity="1"
+          style="width: 100%; height: 100%;">
+        </model-viewer>
+      </div>
+
+      <div class="pd-details">
+        <a class="back-btn" href="catalog.html">
+          <i class="ri-arrow-left-line"></i> Back to Catalog
+        </a>
+
+        <h1 class="pd-title" id="pd-name">Loading...</h1>
+        <span class="pd-price" id="pd-price">$0.00</span>
+
+        <p class="pd-desc" id="pd-desc">
+          Loading product description...
+        </p>
+
+        <p style="color: #888; margin-bottom: 10px;">Select Size:</p>
+        <div class="color-selector" style="background: transparent; border: none; padding: 0; margin-bottom: 20px; justify-content: flex-start;" data-size-picker>
+          <div class="size-opt">7</div>
+          <div class="size-opt active">8</div>
+          <div class="size-opt">9</div>
+          <div class="size-opt">10</div>
+        </div>
+
+        <div class="pd-actions">
+          <button class="btn-cart" type="button" onclick="alert('Added to Cart')">Add to Cart</button>
+          <button class="btn-buy" type="button" onclick="alert('Proceeding to Checkout')">Buy Now</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Air Stride. Designed & Developed by CodingWithWajahat.</p>
+    </div>
+  </footer>
+</body>
+</html>
